@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .menu {
+            display: none;
+            background-color: #333;
+            padding: 10px;
+            position: absolute;
+            top: 50px;
+            width: 100%;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+        .menu-button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .active { display: block; }
+    </style>
+</head>
+<body>
+
+<button class="menu-button" onclick="toggleMenu()">Menu</button>
+<div class="menu" id="mobileMenu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</div>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
